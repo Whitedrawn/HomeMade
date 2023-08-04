@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link href="../styles/css/mStyle.css" rel="stylesheet">
+    <script>
+        function validateForm() 
+        {
+         var x = parseInt(document.forms["order-form"]["telephone"].value);
+        if (isNaN(x)) 
+            {
+            alert("Please enter a valid phone number");
+            return false;
+            }
+        }
+    </script>
+   
+</head>
+<body>
+
+        <a href="../html/index.html"><img src="../styles/images/logo.png" class="custom-logo"></a>
+        <h1>Place your order!</h1>
+        <form name="order-form" action="https://www.learningwebdesign.com/contest.php" onsubmit="return validateForm()" method="post">
+           <div class="order">
+
+                 <h2>Customer Information</h2>
+               <ul>
+            <li><label for="form-name">Name:</label> <input type="text" name="username" id="form-name" required></li>
+            <li><label for="form-email">Email Address:</label> <input type="email" name="emailaddress" id="form-email" required></li>
+            <li><label for="form-tel">Telephone Number:</label> <input type="tel" name="telephone" id="form-tel" required></li>
+            <li><label for="form-address">Address:</label> <input type="address" name="address" id="form-address" required></li>
+                  <br>
+           
+                 </ul>
+
+           <h2>Order information</h2>
+          
+             <legend>Items and specification</legend>
+             <textarea name="story" rows="4" cols="60" maxlength="500" id="form-story" placeholder="Please write your order and the quantity desired" required></textarea></li>
+
+                 
+               <legend>Receiving the order <em>(choose one)</em>:</legend>
+                     <ul>
+                        <li><label><input type="radio" name="delivery" value="Delivery" checked> Delivery </label></li>
+                        <li><input type="radio" name="delivery" value="Pick Up"> Pick Up </li>
+                    </ul>
+
+
+
+         <p><input type="submit" class="orderY" value="Place order">
+         <input type="reset" class="orderN" value="Clear order"></p>
+         </div>
+        
+        </div>
+      </form>
+    <div class="footer">
+        <p>Facebook: @handmadesweets</p>
+        <p>Instagram: @handmadesweets</p>
+    </div>
+</body>
+</html>

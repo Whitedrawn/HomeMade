@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="eg">
+    <head>
+        <title>Reviews</title>
+        <script type="text/javascript">
+        function addText()
+        {
+            if(!document.getElementById) return;
+            var sentence = document.changeform.sentence.value;
+            var node=document.createTextNode(`${sentence} `);
+            document.getElementById("addR").appendChild(node);
+            document.changeform.sentence.value="";
+        }
+        </script>
+        <link href="../styles/css/mStyle.css" rel="stylesheet">
+    </head>
+    <body>
+        <section>
+        <a href="../html/index.html"><img src="../styles/images/logo.png" class="custom-logo"></a>
+        <h1 id="heading1"></h1>
+        <h1>Please leave a review below: </h1>
+        <form name="changeform">
+            <input type="text" name="sentence" size="65" />
+            <input type="button" value="Add" class="review" onclick ="addText();"/>
+        </form>
+        <p id="addR"></p>
+    </section>
+    </body>
+</html>
